@@ -3,7 +3,7 @@ import numpy as np
 import joblib
 
 # Load trained model
-model = joblib.load("ckd_model.pkl")
+model = joblib.load("kidney_disease_project.pkl")
 
 st.set_page_config(page_title="CKD Prediction",layout="wide")
 
@@ -55,4 +55,5 @@ if st.button("🔍 Predict CKD"):
     if prediction[0] == 1:
         st.error("⚠ Patient is likely to have Chronic Kidney Disease")
     else:
+
         st.success("✅ Patient is NOT likely to have CKD")
